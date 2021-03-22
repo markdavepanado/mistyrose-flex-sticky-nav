@@ -5,6 +5,7 @@ const flexNav = document.querySelector("nav");
 const liArr = ul.querySelectorAll("li");
 
 const navTransition = () => {
+  if (!ul.classList.contains("ul-mobile")) return;
   // disable click on element
   nav.style.pointerEvents = "none";
   // disable scrolling
@@ -34,7 +35,7 @@ const navTransition = () => {
       if (e.animationName === "slideDown") {
         ul.classList.add("close");
         nav.style.pointerEvents = "auto";
-        document.getElementsByTagName("body")[0].style.overflow = "visible";
+        document.getElementsByTagName("body")[0].style.overflow = "auto";
       }
     });
   }
