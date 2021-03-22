@@ -230,6 +230,10 @@ nav.flex-nav .hamburger-nav {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
   }
+
+  .scrollUp__button {
+    bottom: 40px !important;
+  }
 }
 
 @keyframes slideUp {
