@@ -2,6 +2,7 @@ const nav = document.querySelector("nav .hamburger-nav");
 const burgerDivs = document.querySelectorAll(".hamburger-nav div");
 const ul = document.getElementById("navUl");
 const flexNav = document.querySelector("nav");
+const liArr = ul.querySelectorAll("li");
 
 const navTransition = () => {
   // disable click on element
@@ -39,7 +40,13 @@ const navTransition = () => {
   }
 };
 
+// navigation button
 nav.addEventListener("click", navTransition);
+
+// li -> to close the mobile when li has been clicked
+liArr.forEach((li) => {
+  li.addEventListener("click", navTransition);
+});
 
 // after open transition enable click
 function hamburgerNav(e) {
