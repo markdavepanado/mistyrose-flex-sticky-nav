@@ -344,3 +344,35 @@ footer {
 .footer__links-container a:active i {
   transform: scale(1);
 }
+
+.scrollUp__button {
+  position: fixed;
+  cursor: pointer;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  border: 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.2s;
+}
+
+.scrollUp__button:hover {
+  transform: scale(1.2);
+}
+
+.scrollUp__button:focus,
+.scrollUp__button:active {
+  outline: 0;
+}
+.scrollUp__button:active {
+  transform: scale(1);
+}
+
+.scrollUp__button i {
+  font-size: 1.3rem;
+  color: #9a2b46;
+}
