@@ -39,6 +39,7 @@ nav.flex-nav {
   top: 0;
   left: 0;
   transition: all 0.6s ease;
+  z-index: 9999;
 }
 
 nav.flex-nav.sticky {
@@ -71,6 +72,10 @@ nav.flex-nav .ul-desktop li.contact a {
 
 nav.flex-nav .ul-desktop li.contact:hover {
   transform: scale(1.1);
+}
+
+nav.flex-nav .ul-desktop li.contact:active {
+  transform: scale(1);
 }
 
 nav.flex-nav .ul-desktop li:not(.contact) a:hover {
@@ -214,6 +219,17 @@ nav.flex-nav .hamburger-nav {
   .flex-nav.white {
     background-color: #fff;
   }
+
+  footer {
+    padding: 0.4rem !important;
+    left: 0 !important;
+    transform: translate(0) !important;
+    width: 100% !important;
+    border-radius: unset !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+  }
 }
 
 @keyframes slideUp {
@@ -267,4 +283,64 @@ nav.flex-nav .hamburger-nav {
 .section-container#contactus {
   background-color: #9a2b46;
   color: #fff;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.footer__links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__links-container a {
+  text-decoration: none;
+  padding: 0 0.3rem;
+}
+
+.footer__links-container i.fa-facebook {
+  color: #1778f2;
+}
+
+.footer__links-container i.fa-github {
+  color: #211f1f;
+}
+
+.footer__links-container i.fa-gitlab {
+  color: #fc6d27;
+}
+
+.footer__links-container i.fa-linkedin {
+  color: #2867b2;
+}
+
+.footer__links-container i.fa-codepen {
+  color: #000000;
+}
+
+.footer__links-container i.fa-envelope {
+  color: #bb001b;
+}
+
+.footer__links-container i {
+  font-size: 1.1rem;
+}
+
+.footer__links-container a:hover i {
+  transform: scale(1.3);
+}
+
+.footer__links-container a:active i {
+  transform: scale(1);
 }
