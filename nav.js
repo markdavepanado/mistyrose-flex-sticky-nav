@@ -3,7 +3,7 @@ const burgerDivs = document.querySelectorAll(".hamburger-nav div");
 const ul = document.getElementById("navUl");
 const flexNav = document.querySelector("nav");
 
-nav.addEventListener("click", function() {
+const navTransition = () => {
   // disable click on element
   nav.style.pointerEvents = "none";
   // disable scrolling
@@ -12,7 +12,7 @@ nav.addEventListener("click", function() {
   nav.classList.toggle("open");
 
   // disable click during transition
-  burgerDivs.forEach(burgerDiv =>
+  burgerDivs.forEach((burgerDiv) =>
     burgerDiv.addEventListener("transitionend", hamburgerNav)
   );
 
@@ -29,7 +29,7 @@ nav.addEventListener("click", function() {
     flexNav.classList.remove("white");
 
     // enable every event that's been disabled after animation
-    ul.addEventListener("animationend", function(e) {
+    ul.addEventListener("animationend", function (e) {
       if (e.animationName === "slideDown") {
         ul.classList.add("close");
         nav.style.pointerEvents = "auto";
@@ -37,7 +37,9 @@ nav.addEventListener("click", function() {
       }
     });
   }
-});
+};
+
+nav.addEventListener("click", navTransition);
 
 // after open transition enable click
 function hamburgerNav(e) {
@@ -57,19 +59,17 @@ function screenSize() {
     ul.classList.remove("open");
     nav.style.pointerEvents = "auto";
     nav.classList.remove("open");
-    console.log(flexNav);
     flexNav.classList.remove("white");
   } else {
     ul.className = "ul-mobile close";
     ul.classList.remove("open");
     nav.classList.remove("open");
-    console.log(flexNav);
     flexNav.classList.remove("white");
   }
 }
 
 // scrolling for sticky navigation
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   // window.pageYOffset || document.documentElement.scrollTop,
   flexNav.classList.toggle(
     "sticky",
